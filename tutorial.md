@@ -47,15 +47,6 @@ git  push -u origin main
 According to github docs: "The `rebase` command allows you to easily change a series of commits, modifying the history of your repository.
 You can reorder, edit, or squash commits together."
 
-### Avoid tracking certain files with .gitignore
-
-Usually there are going to be files that you do not want to track (i.e., large datafiles, compile builds, temporary files, ...).
-To avoid tracking these files, you can add them in the `.gitignore` file on your repo.
-You can use astherisks to create patterns. For instance:
-
-- `*.dat` will ignore all files of the `dat`type, also those in subfolders.
-- `!network.dat` will add an exception to the pattern for specific matching filenames.
-
 ### Tokens
 
 Github now works with tokens instead of passwords.
@@ -67,6 +58,23 @@ At the current date (Wed 04 Jan 2023 09:27:26 AM CET) there are two options, but
 is in a Beta phase, so we use the *Tokens (classic)*.
 When generating a new token, specify the scope, specially if you are using a private repo.
 Save your token locally, since you'll need it anytime you want to push changes.
+
+
+### Avoid tracking certain files with .gitignore
+
+Usually there are going to be files that you do not want to track (i.e., large datafiles, compile builds, temporary files, ...).
+To avoid tracking these files, you can add them in the `.gitignore` file on your repo.
+You can use astherisks to create patterns. For instance:
+
+- `*.dat` will ignore all files of the `dat`type, also those in subfolders.
+- `!network.dat` will add an exception to the pattern for specific matching filenames.
+
+You can add comments in the `.gitignore` file starting a line with `#`:
+
+```
+# This is a comment
+But # this is not 
+```
 
 ## Basic commands:
 
