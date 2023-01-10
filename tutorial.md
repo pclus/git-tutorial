@@ -105,7 +105,7 @@ For example, to clone repo to your current folder do:
 git clone https://github.com/pclus/repo.git .
 ```
 
-Notice that if the repo is private it will ask for a "password", a.k.a., a token.
+Notice that if the repo is private it will ask for a "password", i.e., a token.
 
 ### Branching and merging
 
