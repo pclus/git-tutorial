@@ -126,6 +126,26 @@ To merge branch `<new-branch>` to your `main` branch (or any other name):
 2. Merge with `git merge <new-branch>`
 3. (Optional) Remove the useless `<new-branch>` with `git branch -d <new-branch>`
 
+### Branching for backups
+
+In small projects one usually works directly on the `main` branch.
+A simple workflow to backup progress before continuing is to create a new branch and push it to remote:
+
+```
+git branch backup-jan23
+git switch backup-jan23
+git push origin backup-jan23
+git switch main
+```
+
+This produces a branching tree like:
+
+```
+a - b - c - e     (main)
+     \  d         (backup-jan23)
+```
+There are other ways to backup that avoid create a permanent branch, e.g. check [`bundle`](https://linux.die.net/man/1/git-bundle)
+
 ### Resolve conflicts
 
 You edit a file `example.c` from machine A, but forget to commit and push changes.
