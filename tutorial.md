@@ -76,7 +76,7 @@ You can add comments in the `.gitignore` file starting a line with `#`:
 But # this is not 
 ```
 
-## Basic commands:
+## Basic workflow:
 
 ### Working remotely: `push`and `pull`
 
@@ -125,6 +125,37 @@ To merge branch `<new-branch>` to your `main` branch (or any other name):
 1. Move to the `main` (or else) branch: `git switch main`
 2. Merge with `git merge <new-branch>`
 3. (Optional) Remove the useless `<new-branch>` with `git branch -d <new-branch>`
+
+### Resolve conflicts
+
+You edit a file `example.c` from machine A, but forget to commit and push changes.
+Then, from machine B, you make further advances on `example.c` that interfere with the previously uncommited changes (i.e., same line editing). 
+You add, commit, and push the changes from B.
+The next day, when trying to pull `example.c` from A, git will not allow you because the two branches diverged.
+
+It is as easy as follow the instructions from git:
+
+1. `add` and `commit` the changes you made and forgot to commit.
+2. Fetch the remote changes. In practice you can just `git pull origin main`. 
+The fetch will work, but the merge won't and message will prompt asking you to "fix conflicts".
+3. Open your conlicting file (`example.c`) with any editor (i.e., Visual Studio or Vim).
+In the file you will see the conflicting lines marked with something like
+
+```
+this is not conflicting
+<<<<<<< HEAD
+this is what's in your local file 
+=======
+this is 
+what
+is new in the remote
+>>>>>>> branch-B 
+```
+Edit the file at your convinience and remove the `<<<<<<< HEAD`, `=======`, and `>>>>>>> branch-B` indicators.
+
+4. Everything done, it's a good moment to `add`, `commit`, and `push` (no need to `merge`).
+
+See more about this in the [github docs](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-using-the-command-line).
 
 ### Where am I?
 
