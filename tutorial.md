@@ -95,7 +95,7 @@ In order to clone this repo in a new machine (or new directory in the same machi
 just do:
 
 ```
-git clone <url to repo> <local directory estination>
+git clone <url to repo> <local directory destination>
 ```
 where `<url to repo>` can be obtained from the `<> Code` icon in the github repo page.
 
@@ -183,6 +183,32 @@ See more about this in the [github docs](https://docs.github.com/en/pull-request
 - `git status` will show the list of commited/uncommited changes in the branch.
 - `git log` shows the history of commits and branchings. Remember that `HEAD` is the pointer to the current branch
 - `git log --graph --decorate --oneline` useful to visualize branches and commits. 
+
+## Working across machines with `ssh`
+
+Let's say you have two computers *local* and *remote* and that you can connect
+from the first to the second via `ssh` (here we do not discuss how to setup the ssh).
+It might be useful to use `git` in projects that only concern these two machines (no github involved).
+
+1. Create your new repository from the *remote*:
+
+```
+git init 
+git add .			# optional
+git commit -m "Initial commit"  # optional
+git branch -M main		# recommended
+```
+2. Clone the repository from the *local* machine:
+
+```
+git clone ssh://<username>@<address>/path/to/project .
+```
+
+3. When working from *local* you cannot push to the main branch.
+You should force it, modifying the default behavior. Or work on a different branch...
+
+That's it, but notice that you might want to use `git init --bare` if the remote is only for storing, not working.
+
 
 ## Tricks and tips
 
