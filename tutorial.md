@@ -231,3 +231,9 @@ PS1='${debian_chroot:+($debian_chroot)}\[\033[01;31m\]\u\[\033[00m\]:\[\033[01;3
 
 The name of the branch will be displayied in square brackets, i.e.,  [main].
 You can change the bracketting for instance from `[\1]` to `branch name: \1 !!` in the `parse_git_branch` function.
+
+### Avoid prompt for user and token
+
+One option is to set git through `shh`.
+Another is to install `gh`.
+Follow the [instructions here](https://docs.github.com/en/get-started/getting-started-with-git/caching-your-github-credentials-in-git)
