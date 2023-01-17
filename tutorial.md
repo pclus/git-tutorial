@@ -156,9 +156,9 @@ The next day, when trying to pull `example.c` from A, git will not allow you bec
 It is as easy as follow the instructions from git:
 
 1. `add` and `commit` the changes you made and forgot to commit.
-2. Fetch the remote changes. In practice you can just `git pull origin main`. 
-The fetch will work, but the merge won't and message will prompt asking you to "fix conflicts".
-3. Open your conlicting file (`example.c`) with any editor (i.e., Visual Studio or Vim).
+2. Fetch the remote changes: `git fetch origin main`. 
+3. Now you can try to merge, `git merge origin/main`, but it will fail and ask you to "fix conflicts".
+4. Open your conlicting file (`example.c`) with any editor (i.e., Visual Studio or Vim).
 In the file you will see the conflicting lines marked with something like
 
 ```
@@ -173,7 +173,7 @@ is new in the remote
 ```
 Edit the file at your convinience and remove the `<<<<<<< HEAD`, `=======`, and `>>>>>>> branch-B` indicators.
 
-4. Everything done, it's a good moment to `add`, `commit`, and `push` (no need to `merge`).
+5. Everything done, it's a good moment to `add`, `commit`, and `push` (no need to `merge`).
 
 See more about this in the [github docs](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-using-the-command-line).
 
