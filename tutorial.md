@@ -5,6 +5,15 @@ For initial steps you can also check, for instance, [this tutorial](https://www.
 
 ## Create and initialize a repository:
 
+If you are starting an empty project, or a project already in github, just need to clone into your local workspace:
+
+```
+git clone https://github.com/pclus/<github-repo-name> . # or any other valid URL
+```
+Notice the `.` at the end to clone to the current (`pwd`) directory.
+
+Otherwise, if you already have some files in your local machine:
+
 1. Go to your github page and create a new repo.
 2. Go to your local project workspace and do:
 
@@ -237,3 +246,9 @@ You can change the bracketting for instance from `[\1]` to `branch name: \1 !!` 
 One option is to set git through `shh`.
 Another is to install `gh`.
 Follow the [instructions here](https://docs.github.com/en/get-started/getting-started-with-git/caching-your-github-credentials-in-git)
+
+### Globally change default branch name to `main`
+
+```
+git config --global init.defaultBranch main
+```
