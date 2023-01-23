@@ -1,3 +1,5 @@
+<!-- Some comment--!>
+
 # Tutorial on git and github
 
 For initial steps you can also check, for instance, [this tutorial](https://www.freecodecamp.org/news/git-and-github-for-beginners/).
@@ -186,12 +188,14 @@ Edit the file at your convinience and remove the `<<<<<<< HEAD`, `=======`, and 
 
 See more about this in the [github docs](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-using-the-command-line).
 
-### Where am I?
+## Where am I?
 
 - `git branch` will list all branches and mark the one you are currently in.
 - `git status` will show the list of commited/uncommited changes in the branch.
 - `git log` shows the history of commits and branchings. Remember that `HEAD` is the pointer to the current branch
 - `git log --graph --decorate --oneline` useful to visualize branches and commits. 
+- `git config --get remote.origin.url` or `git remote show origin` will display you the URL for `origin`.
+- `git remote set-url origin <url>` changes the `remote origin` to the new URL.
 
 ## Working across machines with `ssh`
 
@@ -214,10 +218,25 @@ git clone ssh://<username>@<address>/path/to/project .
 ```
 
 3. When working from *local* you cannot push to the main branch.
-You should force it, modifying the default behavior. Or work on a different branch...
+You should force it, modifying the default behavior. Or push to a different branch and then merging (which might be problematic if you forget).
 
-That's it, but notice that you might want to use `git init --bare` if the remote is only for storing, not working.
+You might want to use `git init --bare` if the remote is only for storing, not working.
+An option is to create an additional directory in the remote machine that contains the `bare` repository (i.e., only to push and pull from, not to work with).
+Then you can have both, your local and remote pushing and pulling to the bare repository (as is if it was github).
+To be precise:
 
+1. Create a directory in your remote machine called, for instance, `mkdir ~/BareRepos/project`
+2. From there, `git init --bare`.
+3. Go to either of your workspaces (remote or local), and proceed as normal
+
+```
+git init
+git add .
+git commit -m "Initial commit"
+git remote add origin ssh://<uname>@<address>/~/BareRepos/project # from local
+git remote add origin ~/BareRepos/project # from remote
+git push origin main
+```
 
 ## Tricks and tips
 
