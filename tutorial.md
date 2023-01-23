@@ -1,4 +1,3 @@
-<!-- Some comment--!>
 
 # Tutorial on git and github
 
