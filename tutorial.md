@@ -1,28 +1,27 @@
-
-<!-- vim-markdown-toc GFM -->
-
-* [Tutorial on git and github](#tutorial-on-git-and-github)
-	* [Create and initialize a repository:](#create-and-initialize-a-repository)
-		* [Solving initial conflicts with `rebase`](#solving-initial-conflicts-with-rebase)
-		* [Tokens](#tokens)
-		* [Avoid tracking certain files with .gitignore](#avoid-tracking-certain-files-with-gitignore)
-	* [Basic workflow:](#basic-workflow)
-		* [Working remotely: `push`and `pull`](#working-remotely-pushand-pull)
-		* [Cloning](#cloning)
-		* [Branching and merging](#branching-and-merging)
-		* [Branching for backups](#branching-for-backups)
-		* [Resolve conflicts](#resolve-conflicts)
-	* [Where am I?](#where-am-i)
-	* [Working across machines with `ssh`](#working-across-machines-with-ssh)
-	* [Tricks and tips](#tricks-and-tips)
-		* [Bash prompt branch display](#bash-prompt-branch-display)
-		* [Avoid prompt for user and token](#avoid-prompt-for-user-and-token)
-		* [Globally change default branch name to `main`](#globally-change-default-branch-name-to-main)
-
-<!-- vim-markdown-toc -->
 # Tutorial on git and github
 
 For initial steps you can also check, for instance, [this tutorial](https://www.freecodecamp.org/news/git-and-github-for-beginners/).
+
+<!-- vim-markdown-toc GFM -->
+
+* [Create and initialize a repository:](#create-and-initialize-a-repository)
+	* [Solving initial conflicts with `rebase`](#solving-initial-conflicts-with-rebase)
+	* [Tokens](#tokens)
+	* [Avoid tracking certain files with .gitignore](#avoid-tracking-certain-files-with-gitignore)
+* [Basic workflow:](#basic-workflow)
+	* [Working remotely: `push`and `pull`](#working-remotely-pushand-pull)
+	* [Cloning](#cloning)
+	* [Branching and merging](#branching-and-merging)
+	* [Branching for backups](#branching-for-backups)
+	* [Resolve conflicts](#resolve-conflicts)
+* [Where am I?](#where-am-i)
+* [Working across machines with `ssh`](#working-across-machines-with-ssh)
+* [Tricks and tips](#tricks-and-tips)
+	* [Bash prompt branch display](#bash-prompt-branch-display)
+	* [Avoid prompt for user and token](#avoid-prompt-for-user-and-token)
+	* [Globally change default branch name to `main`](#globally-change-default-branch-name-to-main)
+
+<!-- vim-markdown-toc -->
 
 
 ## Create and initialize a repository:
