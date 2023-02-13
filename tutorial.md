@@ -106,6 +106,10 @@ You can add comments in the `.gitignore` file starting a line with `#`:
 But # this is not 
 ```
 
+Files already staged or pushed won't be affected if they are included in a `.gitignore`
+later on.
+In order to do so: `git rm -r --cached <files-to-unstage>`
+
 ## Basic workflow:
 
 ### Working remotely: `push`and `pull`
