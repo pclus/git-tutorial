@@ -288,6 +288,7 @@ You can change the bracketting for instance from `[\1]` to `branch name: \1 !!` 
 One option is to set git through `shh`.
 Another is to install `gh`.
 Follow the [instructions here](https://docs.github.com/en/get-started/getting-started-with-git/caching-your-github-credentials-in-git)
+and then load, from a terminal `gh auth login` and follow the instructions.
 
 ### Globally change default branch name to `main`
 
