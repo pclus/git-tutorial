@@ -110,6 +110,12 @@ Files already staged or pushed won't be affected if they are included in a `.git
 later on.
 In order to do so: `git rm -r --cached <files-to-unstage>`
 
+Ignored files are not tracked, so they appear in all branches.
+For instance, if you ignore files with the format `*.dat`,
+and you have a code that generates an output with this format, 
+this output will appear in all branches, regardless of the branch
+that created the new file (for our purposes this is actually quite convenient!).
+
 ## Basic workflow:
 
 ### Working remotely: `push`and `pull`
