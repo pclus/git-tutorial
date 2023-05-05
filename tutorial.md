@@ -246,6 +246,19 @@ See more about this in the [github docs](https://docs.github.com/en/pull-request
 - `git config --get remote.origin.url` or `git remote show origin` will display you the URL for `origin`.
 - `git remote set-url origin <url>` changes the `remote origin` to the new URL.
 
+To rescue a version from a previous commit you can use:
+```
+git reset --hard <commit-before-merge>
+```
+This removes the commits posterior to the reset point, getting you back on track.
+**But** if the commits where pushed remotely, you need to use the `revert` option:
+
+```
+git revert -m 1 <merge-commit-hash>
+```
+The main difference is that `revert` creates a new commit that you can synchronize with the other machines, whereas with `reset` you will
+be behind when trying to `push` your changes.
+
 ## Working across machines with `ssh`
 
 Let's say you have two computers *local* and *remote* and that you can connect
