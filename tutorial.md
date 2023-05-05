@@ -121,12 +121,33 @@ that created the new file (for our purposes this is actually quite convenient!).
 ### Working remotely: `push`and `pull`
 
 ```
-git push <remote_name> <branch name>
-git pull <remote_name> <branch name>
+git push <remote_name> <(local) branch name>
+git pull <remote_name> <(remote) branch name>
 ```
 
 Usually `<remote_name>` will be `origin`and `<branch_name>` will be `main`.
 The command `pull` is a combination of `fetch` and `merge`.
+
+`push` will update the remote branch `<branch name>`. 
+If such branch does not exist remotely, it will be created.
+For instance, this is what you have to use when you created a new branch
+locally and want to updated in the remote.
+
+`pull` instead is a combination of `fetch` and `merge`. 
+Therefore, it will synchronize the remote branch named `<branch name>` in
+the remote with **your current branch**:
+
+```
+git switch branch1
+git pull origin branch1 # will synchronize branch1
+```
+
+but
+
+```
+git switch main
+git pull origin branch1 # will merge branch1 to your local main!
+```
 
 ### Cloning
 
@@ -168,7 +189,6 @@ To merge branch `<new-branch>` to your `main` branch (or any other name):
 
 ### Branching for backups
 
-In small projects one usually works directly on the `main` branch.
 A simple workflow to backup progress before continuing is to create a new branch and push it to remote:
 
 ```
