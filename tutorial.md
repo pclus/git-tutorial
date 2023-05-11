@@ -334,3 +334,14 @@ and then load, from a terminal `gh auth login` and follow the instructions.
 ```
 git config --global init.defaultBranch main
 ```
+
+### Global login options using `gh`
+
+`gh` is a command-line tool that will help configuring and synchronizing your local `git`'s with `github`.
+For instance, to establish a global login and avoid inserting tokens or passwords for every push, one can use:
+ 
+```
+sudo apt install gh
+gh auth login
+```
+And follow the instructions
