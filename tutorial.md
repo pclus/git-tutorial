@@ -24,7 +24,7 @@ For initial steps you can also check, for instance, [this tutorial](https://www.
 <!-- vim-markdown-toc -->
 
 
-## Create and initialize a repository:
+## Create and initialize a repository
 
 If you are starting an empty project, or a project already in github, just need to clone into your local workspace:
 
@@ -116,7 +116,7 @@ and you have a code that generates an output with this format,
 this output will appear in all branches, regardless of the branch
 that created the new file (for our purposes this is actually quite convenient!).
 
-## Basic workflow:
+## Basic workflow
 
 ### Working remotely: `push`and `pull`
 
