@@ -187,6 +187,14 @@ To merge branch `<new-branch>` to your `main` branch (or any other name):
 2. Merge with `git merge <new-branch>`
 3. (Optional) Remove the useless `<new-branch>` with `git branch -d <new-branch>`
 
+Other useful commands for managing branches:
+
+- `git branch` shows a list of all branches.
+- `git branch -r` shows a list of all remote branches.
+- To remove a branch use `git branch -d <branch_to_be_removed>` or `git branch -D <branch_to_be_removed>` if it is unmerged.
+- To remove a remote branch use `git push orign --delete <remote_branch_to_be_removed>`.
+
+
 ### Branching for backups
 
 A simple workflow to backup progress before continuing is to create a new branch and push it to remote:
